@@ -10,7 +10,7 @@
    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  '(company-quickhelp-color-background "#4F4F4F")
  '(company-quickhelp-color-foreground "#DCDCCC")
- '(custom-enabled-themes (quote (deeper-blue)))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(custom-safe-themes
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "a7051d761a713aaf5b893c90eaba27463c791cd75d7257d3a8e66b0c8c346e77" "84890723510d225c45aaff941a7e201606a48b973f0121cb9bcb0b9399be8cba" "7e7c9639e7b83c3271e427becc0336b85116cee201b11b7b8e9e9474c812633d" "b46ee2c193e350d07529fcd50948ca54ad3b38446dcbd9b28d0378792db5c088" default)))
@@ -55,7 +55,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 139 :width normal)))))
+ '(default ((t (:family "Source Code Pro" :foundry "ADBO" :slant normal :weight normal :height 120 :width normal)))))
 
 
 
@@ -70,6 +70,15 @@
 (setq org-todo-keywords
       '((sequence "TODO" "WAIT" "|" "DONE")))
 
+(setq org-todo-keyword-faces
+      '(("TODO" . "cyan") ("WAIT" . "magenta")
+        ("DONE" . "blue")))
+
+
+
+(setq org-priority-faces '((?A . (:foreground "red" :weight 'bold))
+                           (?B . (:foreground "orange"))
+                           (?C . (:foreground "green"))))
     (global-visual-line-mode) 
 
 (require 'package)
